@@ -4,9 +4,14 @@ Soket programlama, paralel programlama ve multithreading konularını öğrenmek
 Özellikler:
 
 -Cross Platform
+
 -Multi Thread
+
 -Multi User Support
+
 -Callback Support
+
 -Configurable (Port, Connection size etc.)
+
 -Modern C++
 
