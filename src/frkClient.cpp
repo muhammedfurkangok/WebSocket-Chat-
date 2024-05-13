@@ -1,15 +1,15 @@
 #include "frkClient.h"
 
-namespace WebSocket {
+namespace WebSocket{
 
-	void frkClient::SetDefault()
+	void frkClient::SetDefault() 
 	{
 		inet_pton(AF_INET, this->m_serverName.c_str(), &this->m_socketInfo.sin_addr);
 	}
 
 	void frkClient::showMessage(const std::string& t_message)
 	{
-		if (this->m_onMessage != nullptr)
+		if (this->m_onMessage != nullptr) 
 		{
 			this->m_onMessage(t_message);
 		}
@@ -27,9 +27,9 @@ namespace WebSocket {
 
 	void frkClient::recieveMessage()
 	{
-		this->m_thread = std::move(std::thread([=] {
+			this->m_thread = std::move(std::thread([=] {
 			int len;
-			char message_buffer[this->getMessageSize];
+			char message_buffer[this -> getMessageSize()];
 
 			while ((len = recv(this->m_socketFd, message_buffer, this->getMessageSize(), 0)) > 0) {
 				message_buffer[len] = '\0';
@@ -43,26 +43,26 @@ namespace WebSocket {
 	void frkClient::writeMessage()
 	{
 		std::string message = "";
-		while (this->m_state == STATE.OPEN)
+		while (this->m_state == STATE.OPEN) 
 		{
 			std::getline(std::cin, message);
 			this->sendMessage(this->m_socketFd, message);
 		}
 	}
 
-	frkClient::frkClient() :
-		frkNodeV4()
+	frkClient::frkClient():
+	frkNodeV4() 
 	{
 		SetDefault();
 	}
 
-	frkClient::frkClient(const int& t_port) :
+	frkClient::frkClient(const int& t_port):
 		frkClient(t_port)
 	{
 		SetDefault();
 	}
 
-	frkClient::frkClient(const std::string& t_serverName, const int& t_port) :
+	frkClient::frkClient(const std::string& t_serverName, const int& t_port):
 		frkNodeV4(t_port), m_serverName(t_serverName)
 	{
 
@@ -75,7 +75,7 @@ namespace WebSocket {
 		m_onMessage = t_function;
 
 	}
-	void frkClient::connectServer()
+	void frkClient::connectServer() 
 	{
 		this->_connectServer();
 		showMessage("Baglanti basarili");
@@ -91,7 +91,7 @@ namespace WebSocket {
 		}
 	}
 
-	frkClient::~frkClient()
+	frkClient::~frkClient() 
 	{
 		this->closeConnection();
 	}
