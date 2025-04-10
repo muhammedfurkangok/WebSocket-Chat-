@@ -1,54 +1,45 @@
 #include <iostream>
-#include <limits>
 #include <csignal>
 #include "frkServer.h"
 
 using namespace std;
 using namespace WebSocket;
 
-frkServer* chat_server = nullptr;
+frkServer* chatServer = nullptr;
 
 void signalHandler(int);
 void printMessage(const string&);
 
-int main(int argc, char** argv) {
+int main() {
+    signal(SIGINT, signalHandler);
 
-	signal(SIGINT, signalHandler);
+    int port = 5000;
+    int connectionSize = 16;
 
-	int port = 5000;
-	cout << "Port: ";
-	cin >> port;
-	cout << "Connection: ";
-	int connection_size = 16;
-	cin >> connection_size;
+    cout << "Server port (Varsayılan: 5000): ";
+    cin >> port;
 
-	try {
+    cout << "Maksimum bağlantı sayısı (Varsayılan: 16): ";
+    cin >> connectionSize;
 
-		chat_server = new frkServer(port, connection_size);
-		chat_server->setOnMessage(printMessage);
-		chat_server->runServer();
-		delete chat_server;
+    try {
+        chatServer = new frkServer(port, connectionSize);
+        chatServer->setOnMessage(printMessage);
+        chatServer->runServer();
+    } catch (const exception& e) {
+        cerr << "Hata: " << e.what() << endl;
+    }
 
-	}
-	catch (const exception& e) {
-		cerr << e.what() << endl;
-	}
-
-	return 0;
+    delete chatServer;
+    return 0;
 }
 
-void signalHandler(int code) {
-	char ch;
-	cout << "Are you sure you want to close socket?(Y/N)";
-	cin >> ch;
-	if (toupper(ch) == 'Y' && chat_server != nullptr) {
-		delete chat_server;
-		exit(0);
-	}
-	cin.clear();
-	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+void signalHandler(int) {
+    cout << "\nServer kapatılıyor...\n";
+    delete chatServer;
+    exit(0);
 }
 
-void printMessage(const string& t_message) {
-	std::cout << t_message << std::endl;
+void printMessage(const string& message) {
+    cout << "İstemci: " << message << endl;
 }

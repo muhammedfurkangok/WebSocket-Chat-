@@ -6,6 +6,10 @@
 #include <functional>
 #include <thread>
 #include <mutex>
+#include <winsock2.h> // Windows için socket API
+#include <windows.h>
+#include <string>
+#include <cstring>
 
 namespace WebSocket {
 	class frkClient : protected frkNodeV4 {
@@ -13,15 +17,14 @@ namespace WebSocket {
 
 		void SetDefault();
 
-		//mesaj event fonksiyonu
-
-		std::function<void(const std::string& t_message) > m_onMessage = nullptr;
+		// mesaj event fonksiyonu
+		std::function<void(const std::string& t_message)> m_onMessage = nullptr;
 		void showMessage(const std::string& t_message);
 
-		//server
+		// server
 		std::string m_serverName = "localhost";
 
-		//thread
+		// thread
 		std::thread m_thread;
 		std::mutex m_mu;
 
@@ -30,21 +33,20 @@ namespace WebSocket {
 		void writeMessage();
 
 	public:
-		//cons
+		// constructors
 		frkClient();
 		frkClient(const int& t_port);
 		frkClient(const std::string& t_serverName, const int& t_port);
 
-		void setOnMessage(const std::function<void(const std::string&) >& t_function);
+		void setOnMessage(const std::function<void(const std::string&)>& t_function);
 
 		void connectServer();
 		void closeConnection();
 
-		//dest
+		// destructor
 		virtual ~frkClient();
 
 	};
 }
-
 
 #endif // !FRK_CLIENT_H
