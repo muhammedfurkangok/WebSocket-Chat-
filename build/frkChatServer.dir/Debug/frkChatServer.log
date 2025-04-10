@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Gamedev/WebSocket-Chat-/CMakeLists.txt
+  frkServer.cpp
+  frkNodeV4.cpp
+C:\Gamedev\WebSocket-Chat-\src\frkServer.cpp(1,1): error C3378: a declaration can be exported only from a module interface unit
+C:\Gamedev\WebSocket-Chat-\src\frkServer.cpp(1,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Gamedev\WebSocket-Chat-\src\frkServer.cpp(1,15): error C2146: syntax error: missing ';' before identifier 'frkServer'
+C:\Gamedev\WebSocket-Chat-\src\frkServer.cpp(3,1): error C3378: a declaration can be exported only from a module interface unit
+  frkChatServer.cpp
+C:\Gamedev\WebSocket-Chat-\example\frkChatServer.cpp(49,41): warning C4003: not enough arguments for function-like macro invocation 'max'
+C:\Gamedev\WebSocket-Chat-\example\frkChatServer.cpp(49,41): error C2589: '(': illegal token on right side of '::'
+C:\Gamedev\WebSocket-Chat-\example\frkChatServer.cpp(49,13): error C2144: syntax error: 'unknown-type' should be preceded by ')'
+C:\Gamedev\WebSocket-Chat-\example\frkChatServer.cpp(49,13): error C2144: syntax error: 'unknown-type' should be preceded by ';'
+C:\Gamedev\WebSocket-Chat-\example\frkChatServer.cpp(49,41): error C2059: syntax error: ')'
+C:\Gamedev\WebSocket-Chat-\example\frkChatServer.cpp(49,52): error C2059: syntax error: ')'
+  Generating Code...

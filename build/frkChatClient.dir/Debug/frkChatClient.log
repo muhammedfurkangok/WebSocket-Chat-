@@ -1,0 +1,28 @@
+﻿  Building Custom Rule C:/Gamedev/WebSocket-Chat-/CMakeLists.txt
+  frkClient.cpp
+  frkNodeV4.cpp
+C:\Gamedev\WebSocket-Chat-\src\frkClient.cpp(32,46): error C2131: expression did not evaluate to a constant
+      C:\Gamedev\WebSocket-Chat-\src\frkClient.cpp(32,24):
+      failure was caused by a read of a variable outside its lifetime
+      C:\Gamedev\WebSocket-Chat-\src\frkClient.cpp(32,24):
+      see usage of 'this'
+  
+C:\Gamedev\WebSocket-Chat-\src\frkClient.cpp(35,25): error C3863: array type 'char ['function']' is not assignable
+C:\Gamedev\WebSocket-Chat-\src\frkClient.cpp(37,39): error C1903: unable to recover from previous error(s); stopping compilation
+  frkChatClient.cpp
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(25,14): error C2086: 'std::string server': redefinition
+      C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(23,9):
+      see declaration of 'server'
+  
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(26,6): error C2039: 'getline': is not a member of 'std'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\mutex(29,1):
+      see declaration of 'std'
+  
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(26,6): error C3861: 'getline': identifier not found
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(55,41): warning C4003: not enough arguments for function-like macro invocation 'max'
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(55,41): error C2589: '(': illegal token on right side of '::'
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(55,13): error C2144: syntax error: 'unknown-type' should be preceded by ')'
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(55,13): error C2144: syntax error: 'unknown-type' should be preceded by ';'
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(55,41): error C2059: syntax error: ')'
+C:\Gamedev\WebSocket-Chat-\example\frkChatClient.cpp(55,52): error C2059: syntax error: ')'
+  Generating Code...

@@ -1,0 +1,4 @@
+C:/Gamedev/WebSocket-Chat-/build/CMakeFiles/frkChatServer.dir
+C:/Gamedev/WebSocket-Chat-/build/CMakeFiles/frkChatClient.dir
+C:/Gamedev/WebSocket-Chat-/build/CMakeFiles/ALL_BUILD.dir
+C:/Gamedev/WebSocket-Chat-/build/CMakeFiles/ZERO_CHECK.dir

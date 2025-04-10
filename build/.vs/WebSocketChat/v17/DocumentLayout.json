@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Gamedev\\WebSocket-Chat-\\build\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1CF5000E-1D90-3A1F-83AC-97095B1FE698}|frkChatClient.vcxproj|C:\\Gamedev\\WebSocket-Chat-\\src\\frkClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA9A36B0-75A2-33E1-9253-EAA1DBBB4B16}|frkChatServer.vcxproj|C:\\Gamedev\\WebSocket-Chat-\\src\\frkServer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frkClient.cpp",
+              "DocumentMoniker": "C:\\Gamedev\\WebSocket-Chat-\\src\\frkClient.cpp",
+              "RelativeDocumentMoniker": "..\\src\\frkClient.cpp",
+              "ToolTip": "C:\\Gamedev\\WebSocket-Chat-\\src\\frkClient.cpp",
+              "RelativeToolTip": "..\\src\\frkClient.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-10T13:55:44.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frkServer.cpp",
+              "DocumentMoniker": "C:\\Gamedev\\WebSocket-Chat-\\src\\frkServer.cpp",
+              "RelativeDocumentMoniker": "..\\src\\frkServer.cpp",
+              "ToolTip": "C:\\Gamedev\\WebSocket-Chat-\\src\\frkServer.cpp",
+              "RelativeToolTip": "..\\src\\frkServer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-10T13:55:21.551Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
